@@ -13,7 +13,7 @@ module.exports = {
   mixins: [Db],
   
   model: {
-    name: 'users',
+    name: 'user',
     define: {
       id: {
         type: Sequelize.INTEGER,

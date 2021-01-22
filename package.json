@@ -11,7 +11,8 @@
     "lint": "eslint services",
     "dc:up": "docker-compose up --build -d",
     "dc:logs": "docker-compose logs -f",
-    "dc:down": "docker-compose down"
+    "dc:down": "docker-compose down",
+    "d:mysql": "docker exec -it mysql mysql -uroot -p"
   },
   "keywords": [
     "microservices",
