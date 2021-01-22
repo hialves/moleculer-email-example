@@ -1,46 +1,64 @@
-version: "3.3"
+version: '3'
 
 services:
-
-  api:
-    build:
-      context: .
-    image: simple-test
-    env_file: docker-compose.env
-    environment:
-      SERVICES: api
-      PORT: 3000
-    depends_on:
-      - nats
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.api-gw.rule=PathPrefix(`/`)"
-      - "traefik.http.services.api-gw.loadbalancer.server.port=3000"
+# Windows with Docker Desktop WSL 2 backend
+# The vm.max_map_count setting must be set in the docker-desktop container:
+# wsl -d docker-desktop
+# sysctl -w vm.max_map_count=262144
+# https://www.elastic.co/guide/en/elasticsearch/reference/current/docker.html#docker-cli-run-prod-mode
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:6.7.1
+    env_file:
+      - elasticsearch.env
+    ports:
+      - "9200:9200"
+    container_name: elasticsearch
     networks:
-      - internal
+      - bus-dev-utils
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana:6.7.1
+    ports:
+      - "5601:5601"
+    container_name: kibana
+    networks:
+      - bus-dev-utils
+
+  mysql:
+    image: mysql:8
+    restart: always
+    container_name: mysql
+    environment:
+      MYSQL_USER: dbUser
+      MYSQL_PASSWORD: dbPassword
+      MYSQL_ROOT_PASSWORD: dbPassword
+      MYSQL_DATABASE: dbDatabase
+    ports:
+      - "3306:3306"
+    expose:
+      - "3306"
+    networks:
+      - bus-dev-utils
 
   nats:
-    image: nats:2
-    networks:
-      - internal
-
-  traefik:
-    image: traefik:v2.1
-    command:
-      - "--api.insecure=true" # Don't do that in production!
-      - "--providers.docker=true"
-      - "--providers.docker.exposedbydefault=false"
+    image: nats:2.1
+    container_name: nats
     ports:
-      - 3000:80
-      - 3001:8080
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - "4222:4222"
     networks:
-      - internal
-      - default
+      - bus-dev-utils
+
+  redis:
+    image: redis:6.0
+    command: redis-server /usr/local/etc/redis/redis.conf
+    container_name: redis
+    volumes:
+      - ./redis/:/usr/local/etc/redis/
+    ports:
+      - "6379:6379"
+    networks:
+      - bus-dev-utils
 
 networks:
-  internal:
-
-volumes:
-  data:
+  bus-dev-utils:
+    name: bus-dev-utils

@@ -7,5 +7,14 @@ module.exports = {
       pass: ''
     }
   },
-  mailFrom: 'Test Molecule <test@molecule.com>'
+  mailFrom: 'Test Molecule <test@molecule.com>',
+  database: {
+    username: 'dbUser',
+    password: 'dbPassword',
+    host: '127.0.0.1',
+    port: '3306',
+    dialect: 'mysql',
+    database: 'dbDatabase',
+    schema: 'dbSchema'
+  }
 };
