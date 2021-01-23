@@ -6,5 +6,8 @@ module.exports = {
   },
   createPostError: (message, code, type) => {
     return new MoleculerError(message, code, type)
+  },
+  createAuthError: (message, code, type) => {
+    return new MoleculerError(message, code, type)
   }
 }

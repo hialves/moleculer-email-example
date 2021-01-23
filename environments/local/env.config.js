@@ -15,5 +15,6 @@ module.exports = {
     port: '3306',
     dialect: 'mysql',
     database: 'dbDatabase',
-  }
+  },
+  jwtKey: '4c395ac11092015d47872642262b800c'
 };

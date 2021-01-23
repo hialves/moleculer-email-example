@@ -1,44 +1,37 @@
-"use strict";
+'use strict';
 
-const DbService = require("moleculer-db");
-const SqlAdapter = require("moleculer-db-adapter-sequelize");
 const PostMixin = require('../mixins/post.mixin')
-const Db = require("../mixins/db.mixin");
-const Sequelize = require('sequelize');
-
-const dbConfig = require('../env.config').database;
-const ErrorBuilder = require("../core/error.builder");
-const PostErrors = require('../utils/post-repo.error')
+const Db = require('../mixins/db.mixin');
 
 /**
  * @typedef {import('moleculer').Context} Context Moleculer's Context
  */
 module.exports = {
-	name: "post-repo",
+	name: 'post-repo',
 
   mixins: [Db, PostMixin],
 
 	settings: {
 		fields: [
-			"id",
-			"title",
-      "description",
-      "userId",
-      "createdAt",
-      "updatedAt"
+			'id',
+			'title',
+      'description',
+      'userId',
+      'createdAt',
+      'updatedAt'
     ],
     entityValidator: {
-      title: "string",
-      description: "string",
-      userId: "number"
+      title: 'string',
+      description: 'string',
+      userId: 'number'
     },
-    populate: {
-      "userId": {
-        action: "post-repo.find",
-        field: "userId",
+    populates: {
+      'user': {
+        action: 'user-repo.get',
+        field: 'userId',
         
         params: {
-          fields: ["id", "name", "email"]
+          fields: 'id name email'
         }
       }
     }
@@ -47,7 +40,16 @@ module.exports = {
 	hooks: {},
 
 	actions: {
+    findByUserId: {
+      params: {
+        userId: 'number'
+      },
+      async handler(ctx) {
+        const posts = await this.adapter.find({search: ctx.params.userId, searchFields: ['userId'], populate: ['user']})
 
+        return posts.map(post => post.toJSON())
+      }
+    }
 	},
 
 	methods: {},

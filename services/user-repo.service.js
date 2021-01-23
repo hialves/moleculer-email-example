@@ -1,52 +1,34 @@
-"use strict";
+'use strict';
 
 const bcrypt = require('bcryptjs');
-const Db = require("../mixins/db.mixin");
-const Sequelize = require('sequelize');
+
+const Db = require('../mixins/db.mixin');
+const UserMixin = require('../mixins/user.mixin')
 
 /**
  * @typedef {import('moleculer').Context} Context Moleculer's Context
  */
 module.exports = {
-	name: "user-repo",
+	name: 'user-repo',
 
-  mixins: [Db],
-  
-  model: {
-    name: 'user',
-    define: {
-      id: {
-        type: Sequelize.INTEGER,
-        autoIncrement: true,
-        primaryKey: true
-      },
-      name: {
-        type: Sequelize.STRING,
-        allowNull: false
-      },
-      email: {
-        type: Sequelize.STRING,
-        allowNull: false
-      },
-      password: {
-        type: Sequelize.STRING,
-        allowNull: false
-      },
-    }
-  },
+  mixins: [Db, UserMixin],
 
 	settings: {
 		fields: [
-			"id",
-			"name",
-      "email",
-      "password",
+			'id',
+			'name',
+      'email',
+      'password'
     ],
     entityValidator: {
-      name: "string",
-      email: "string",
-      password: "string"
-		}
+      name: 'string',
+      email: 'string',
+      password: 'string'
+    },
+    routes: [{
+      path: 'user-repo',
+      authorization: true
+    }]
 	},
 
 	hooks: {
@@ -54,11 +36,15 @@ module.exports = {
       create: ['hashPassword']
     },
     after: {
-      '*': ['removePassword']
+
     }
   },
 
-	actions: {},
+  actions: {
+
+  },
+  
+  events: {},
 
 	methods: {
 		async hashPassword(ctx) {

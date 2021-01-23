@@ -4,7 +4,7 @@ const Sequelize = require('sequelize');
 
 module.exports = {
   model: {
-    name: 'posts',
+    name: 'post',
     define: {
       id: {
         type: Sequelize.INTEGER,
@@ -21,6 +21,10 @@ module.exports = {
       },
       userId: {
         type: Sequelize.INTEGER,
+        references: {
+          model: 'user',
+          key: 'id'
+        }
       },
       createdAt: {
         type: Sequelize.DATE,
@@ -32,6 +36,6 @@ module.exports = {
         allowNull: false,
         defaultValue: Sequelize.NOW,
       }
-    }
+    },
   },
 }
