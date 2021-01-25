@@ -27,26 +27,20 @@ module.exports = {
 	 * Actions
 	 */
 	actions: {
-
-	},
-
-	/**
-	 * Events
-	 */
-	events: {
-    'mail.send': {
+    send: {
       params: {
         from: 'string',
         to: 'string',
         subject: 'string',
         html: 'string'
       }, 
+      rest: 'POST /send',
       async handler(ctx) {
         const { from, to, subject, html } = ctx.params
         try{
           const transport = nodemailer.createTransport(mailConfig)
 
-          const result = await transport.sendMail({
+          await transport.sendMail({
             from,
             to,
             subject,
@@ -57,36 +51,30 @@ module.exports = {
 
           return Promise.resolve(true)
         } catch (err) {
+          this.logger.error(err.message)
+
           throw new MoleculerError(err.message)
         }
       }
     }
 	},
 
-	/**
-	 * Methods
-	 */
+	events: {
+    
+	},
+
 	methods: {
 
 	},
 
-	/**
-	 * Service created lifecycle event handler
-	 */
 	created() {
 
 	},
 
-	/**
-	 * Service started lifecycle event handler
-	 */
 	async started() {
 
 	},
 
-	/**
-	 * Service stopped lifecycle event handler
-	 */
 	async stopped() {
 
 	}

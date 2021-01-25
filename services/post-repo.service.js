@@ -45,11 +45,17 @@ module.exports = {
         userId: 'number'
       },
       async handler(ctx) {
-        const posts = await this.adapter.find({search: ctx.params.userId, searchFields: ['userId'], populate: ['user']})
+        try {
+          const posts = await this.adapter.find({search: ctx.params.userId, searchFields: ['userId'], populate: ['user']})
 
-        return posts.map(post => post.toJSON())
+          return posts.map(post => post.toJSON())
+        } catch(err) {
+          this.logger.error(err.message)
+
+          throw new MoleculerError(err.message)
+        }
       }
-    }
+    },
 	},
 
 	methods: {},

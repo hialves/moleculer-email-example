@@ -1,6 +1,7 @@
 "use strict";
-const mailFrom = require('../env.config').mailFrom
 
+const mailFrom = require('../env.config').mailFrom
+const { MoleculerError } = require('moleculer').Errors;
 /**
  * @typedef {import('moleculer').Context} Context Moleculer's Context
  */
@@ -32,12 +33,13 @@ module.exports = {
 		 */
 		sendMailRegistration: {
 			params: {
-        userId: "string"
+        userId: "number|string"
       },
+      rest: 'POST /sendMailRegistration',
 			async handler(ctx) {
         try {
           const { userId } = ctx.params
-          const user = await ctx.call('user-repo.getById', { id: userId })
+          const user = await ctx.call('user-repo.get', { id: userId })
 
           const mailData = {
             from: mailFrom,
@@ -46,9 +48,11 @@ module.exports = {
             html: `Welcome ${user.name}, please confirm your registration...`,
           }
 
-          await this.broker.emit('mail.send', { ...mailData });
+          await ctx.call('mail-sender.send', { ...mailData });
         } catch(err) {
-          throw new MoleculerError(err.message);
+          this.logger.error(err.message)
+
+          throw new MoleculerError(err.message)
         }
 			}
 		},

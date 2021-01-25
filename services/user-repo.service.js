@@ -3,7 +3,9 @@
 const bcrypt = require('bcryptjs');
 
 const Db = require('../mixins/db.mixin');
-const UserMixin = require('../mixins/user.mixin')
+const UserMixin = require('../mixins/user.mixin');
+const { UNAUTHORIZED_ACTION } = require('../utils/user-repo.error');
+const { createUserError } = require('../core/error.builder');
 
 /**
  * @typedef {import('moleculer').Context} Context Moleculer's Context
@@ -25,18 +27,16 @@ module.exports = {
       email: 'string',
       password: 'string'
     },
-    routes: [{
-      path: 'user-repo',
-      authorization: true
-    }]
 	},
 
 	hooks: {
     before: {
-      create: ['hashPassword']
+      create: ['hashPassword'],
+      update: ['validateIdOwner', 'addUpdateTimestamp'],
+      remove: ['validateIdOwner']
     },
     after: {
-
+      
     }
   },
 
@@ -60,8 +60,24 @@ module.exports = {
       }
 
       return res
+    },
+    addUpdateTimestamp(ctx) {
+      ctx.params.updatedAt = new Date()
+    },
+    validateIdOwner(ctx) {
+      if(ctx.meta.user.id !== Number(ctx.params.id)) {
+        const error = createUserError('You do not own that user', 403, UNAUTHORIZED_ACTION)
+
+        throw error
+      }
     }
 	},
 
-	async afterConnected() {}
+  async afterConnected() {},
+  
+  async entityCreated(json, ctx) {
+    this.logger.info("Entity created, sending mail!");
+    
+    await ctx.call('mail.sendMailRegistration', { userId: json.id })
+  },
 };
