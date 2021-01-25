@@ -1,0 +1,34 @@
+_id: req_f2c603237ed248cf870837b96e787865
+type: Request
+parentId: fld_b89b90076b3249c387815de8ef506047
+modified: 1611604096745
+created: 1611600903951
+url: "{{host}}/api/mail-sender/send"
+name: "[SUCCESS] Send"
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"from": "from@mail.com",
+    	"to": "to@mail.com",
+    	"subject": "Subject string",
+    	"html": "Html here"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_4f2fbc608a804a80b343f490751f6896
+authentication:
+  type: bearer
+  token: "{{token}}"
+metaSortKey: -1611600903951
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

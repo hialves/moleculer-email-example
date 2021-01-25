@@ -1,0 +1,24 @@
+_id: req_26f3a4059dea4ed0b92b05a52c438796
+type: Request
+parentId: fld_aa9d8ee1b8e1442bb8ab2cccf2e3640f
+modified: 1611610300403
+created: 1611607415717
+url: "{{host}}/api/user-repo"
+name: "[ERROR-token invalid] User List"
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: bearer
+  token: invalid_token
+  disabled: false
+metaSortKey: -1611600248253.875
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

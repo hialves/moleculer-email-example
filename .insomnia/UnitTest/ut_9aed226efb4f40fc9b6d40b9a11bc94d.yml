@@ -1,0 +1,10 @@
+_id: ut_9aed226efb4f40fc9b6d40b9a11bc94d
+type: UnitTest
+parentId: uts_8d782e53e69843e2b1f8d9e0f67ae05b
+modified: 1611611344666
+created: 1611611223051
+requestId: req_63b1f2594a224c929bc8b8cd5b94bfa8
+name: should not get user with invalid token
+code: |-
+  const response1 = await insomnia.send();
+  expect(response1.status).to.equal(500);

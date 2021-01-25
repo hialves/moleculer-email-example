@@ -1,0 +1,21 @@
+_id: req_ccb3fe18f75c4309a1a7b488db7d89f8
+type: Request
+parentId: fld_054713e1b211498f9d41bb0ab8b41618
+modified: 1611610388749
+created: 1611605496162
+url: "{{host}}/api/post-repo"
+name: "[ERROR-no token] Post List"
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1611599822268
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

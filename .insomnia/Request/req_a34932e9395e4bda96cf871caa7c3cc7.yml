@@ -1,0 +1,31 @@
+_id: req_a34932e9395e4bda96cf871caa7c3cc7
+type: Request
+parentId: fld_417a48e1b7c64d408a58d986db431726
+modified: 1611616253964
+created: 1611616228103
+url: "{{host}}/api/mail/sendMailRegistration"
+name: "[ERROR-userId invalid] Send Mail Registration"
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"userId": 999999
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_308b532526a6474d8b18fea8cedc1ea6
+authentication:
+  type: bearer
+  token: "{{token}}"
+metaSortKey: -1611600571969
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

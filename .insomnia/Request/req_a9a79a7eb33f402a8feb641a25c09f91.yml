@@ -1,0 +1,33 @@
+_id: req_a9a79a7eb33f402a8feb641a25c09f91
+type: Request
+parentId: fld_642d821cbefa48fab2e3f674a103dba1
+modified: 1611610403157
+created: 1611600557179
+url: "{{host}}/api/post-repo/1"
+name: "[SUCCESS] Post Update"
+description: ""
+method: PUT
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"name": "Hiago A.",
+    	"email": "test1@gmail.com",
+    	"password": "1234"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_db47ecc2dc924022aed30cd1357009bf
+authentication:
+  type: bearer
+  token: "{{token}}"
+metaSortKey: -1611599822230.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

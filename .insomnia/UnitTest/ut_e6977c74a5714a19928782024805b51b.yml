@@ -1,0 +1,10 @@
+_id: ut_e6977c74a5714a19928782024805b51b
+type: UnitTest
+parentId: uts_41dac9ba6b3d4de888d682fc699b2bcc
+modified: 1611609967112
+created: 1611609876583
+requestId: req_3987025a13c1417fb1bf16d732999d5b
+name: should not create user with password length < 8
+code: |-
+  const response1 = await insomnia.send();
+  expect(response1.status).to.equal(422);

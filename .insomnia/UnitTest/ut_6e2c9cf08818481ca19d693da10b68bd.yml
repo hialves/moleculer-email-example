@@ -1,0 +1,10 @@
+_id: ut_6e2c9cf08818481ca19d693da10b68bd
+type: UnitTest
+parentId: uts_41dac9ba6b3d4de888d682fc699b2bcc
+modified: 1611610114614
+created: 1611610015699
+requestId: req_347c259e2ef1464aba727ee064a6af6c
+name: should not create user with empty name
+code: |-
+  const response1 = await insomnia.send();
+  expect(response1.status).to.equal(422);

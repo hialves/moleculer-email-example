@@ -1,0 +1,33 @@
+_id: req_f0e82e1285684320a133e9dd1351d636
+type: Request
+parentId: fld_fa659263dae04dcb914af9af39d4b417
+modified: 1611615814243
+created: 1611607943439
+url: "{{host}}/api/user-repo/1"
+name: "[ERROR-isnt owner] User Update"
+description: ""
+method: PUT
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"name": "Hiago A.",
+    	"email": "test1@gmail.com",
+    	"password": "1234"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_db47ecc2dc924022aed30cd1357009bf
+authentication:
+  type: bearer
+  token: "{{token2}}"
+metaSortKey: -1611599240578.625
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

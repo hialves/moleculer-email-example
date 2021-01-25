@@ -1,0 +1,10 @@
+_id: ut_721001ee3d244d93be7a441b45463550
+type: UnitTest
+parentId: uts_8d782e53e69843e2b1f8d9e0f67ae05b
+modified: 1611611404461
+created: 1611611392625
+requestId: req_6cb47fb64fa6484f916a280b1ba595cc
+name: should not found a user
+code: |-
+  const response1 = await insomnia.send();
+  expect(response1.status).to.equal(404);

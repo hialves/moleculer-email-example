@@ -1,0 +1,10 @@
+_id: ut_b00f811661aa45daa540135c80f8ad63
+type: UnitTest
+parentId: uts_41dac9ba6b3d4de888d682fc699b2bcc
+modified: 1611609984942
+created: 1611609938589
+requestId: req_e27ff93554904902a7503fcc87618b22
+name: should not create user with email in use
+code: |-
+  const response1 = await insomnia.send();
+  expect(response1.status).to.equal(409);

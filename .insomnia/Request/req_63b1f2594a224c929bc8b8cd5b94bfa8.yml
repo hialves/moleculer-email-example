@@ -1,0 +1,23 @@
+_id: req_63b1f2594a224c929bc8b8cd5b94bfa8
+type: Request
+parentId: fld_57c90e21300849e8811e9cead3ce6bd7
+modified: 1611611169910
+created: 1611611163535
+url: "{{host}}/api/user-repo/1"
+name: "[ERROR-token invalid] User By Id"
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: bearer
+  token: invalid_token
+metaSortKey: -1611598902036.125
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

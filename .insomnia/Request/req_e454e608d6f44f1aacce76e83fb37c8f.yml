@@ -1,0 +1,30 @@
+_id: req_e454e608d6f44f1aacce76e83fb37c8f
+type: Request
+parentId: fld_cd720d973c53429b9d91cb132cba016d
+modified: 1611605301197
+created: 1611605296263
+url: "{{host}}/auth/userLogin"
+name: "[ERROR-email invalid] Login"
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"email": "test",
+    	"password": "12345678"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_86dd666fc58c43959e8e0b827c7e90d8
+authentication: {}
+metaSortKey: -1611597205341.875
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

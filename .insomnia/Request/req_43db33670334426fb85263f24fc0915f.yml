@@ -1,0 +1,29 @@
+_id: req_43db33670334426fb85263f24fc0915f
+type: Request
+parentId: fld_cd720d973c53429b9d91cb132cba016d
+modified: 1611605124701
+created: 1611605122231
+url: "{{host}}/auth/userLogin"
+name: "[ERROR-email empty] Login"
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"password": "1234"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_86dd666fc58c43959e8e0b827c7e90d8
+authentication: {}
+metaSortKey: -1611597205332.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

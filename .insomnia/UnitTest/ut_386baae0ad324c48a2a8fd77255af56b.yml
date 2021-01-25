@@ -1,0 +1,10 @@
+_id: ut_386baae0ad324c48a2a8fd77255af56b
+type: UnitTest
+parentId: uts_84de947325e14886b6fb2b10fdf33a83
+modified: 1611615641737
+created: 1611615605844
+requestId: req_f0e82e1285684320a133e9dd1351d636
+name: should not update user without being owner
+code: |-
+  const response1 = await insomnia.send();
+  expect(response1.status).to.equal(403);

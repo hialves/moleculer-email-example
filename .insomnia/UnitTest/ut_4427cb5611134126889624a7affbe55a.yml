@@ -1,0 +1,10 @@
+_id: ut_4427cb5611134126889624a7affbe55a
+type: UnitTest
+parentId: uts_bef14a07273f49c4bd67483d5f7a74a2
+modified: 1611616335310
+created: 1611616198402
+requestId: req_a34932e9395e4bda96cf871caa7c3cc7
+name: should not send email registration for invalid userId
+code: |-
+  const response1 = await insomnia.send();
+  expect(response1.status).to.equal(500);

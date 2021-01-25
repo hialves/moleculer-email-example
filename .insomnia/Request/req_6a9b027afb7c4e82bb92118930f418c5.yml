@@ -1,0 +1,23 @@
+_id: req_6a9b027afb7c4e82bb92118930f418c5
+type: Request
+parentId: fld_22ad759ae7dd4021a346a9a5991776d1
+modified: 1611610420856
+created: 1611605545624
+url: "{{host}}/api/post-repo/999999"
+name: "[ERROR-not found] Post By Id"
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: bearer
+  token: "{{token}}"
+metaSortKey: -1611599538248.25
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

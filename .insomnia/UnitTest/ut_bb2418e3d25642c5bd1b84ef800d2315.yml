@@ -1,0 +1,10 @@
+_id: ut_bb2418e3d25642c5bd1b84ef800d2315
+type: UnitTest
+parentId: uts_23e410abedc94f088cd5099e06baf777
+modified: 1611610183720
+created: 1611610145820
+requestId: req_e454e608d6f44f1aacce76e83fb37c8f
+name: should not login with invalid email
+code: |-
+  const response1 = await insomnia.send();
+  expect(response1.status).to.equal(422);

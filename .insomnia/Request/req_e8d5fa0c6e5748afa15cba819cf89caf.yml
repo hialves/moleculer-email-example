@@ -1,0 +1,24 @@
+_id: req_e8d5fa0c6e5748afa15cba819cf89caf
+type: Request
+parentId: fld_054713e1b211498f9d41bb0ab8b41618
+modified: 1611610376045
+created: 1611600549280
+url: "{{host}}/api/post-repo"
+name: "[SUCCESS] Post List"
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: bearer
+  token: "{{token}}"
+  disabled: false
+metaSortKey: -1611599822280.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

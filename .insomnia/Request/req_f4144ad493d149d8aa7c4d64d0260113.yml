@@ -1,0 +1,31 @@
+_id: req_f4144ad493d149d8aa7c4d64d0260113
+type: Request
+parentId: fld_fa659263dae04dcb914af9af39d4b417
+modified: 1611610366235
+created: 1611607772874
+url: "{{host}}/api/user-repo/1"
+name: "[ERROR-no token] User Update"
+description: ""
+method: PUT
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"name": "Hiago A.",
+    	"email": "test1@gmail.com",
+    	"password": "1234"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_db47ecc2dc924022aed30cd1357009bf
+authentication: {}
+metaSortKey: -1611599199366.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

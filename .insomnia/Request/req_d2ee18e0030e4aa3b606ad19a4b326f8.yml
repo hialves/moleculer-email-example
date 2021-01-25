@@ -1,0 +1,24 @@
+_id: req_d2ee18e0030e4aa3b606ad19a4b326f8
+type: Request
+parentId: fld_aa9d8ee1b8e1442bb8ab2cccf2e3640f
+modified: 1611610293660
+created: 1611600390244
+url: "{{host}}/api/user-repo"
+name: "[SUCCESS] User List"
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: bearer
+  token: "{{token}}"
+  disabled: false
+metaSortKey: -1611600390245
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,21 @@
+_id: req_c8eb38a9f202478b8332ee117b9482ea
+type: Request
+parentId: fld_aa9d8ee1b8e1442bb8ab2cccf2e3640f
+modified: 1611610306613
+created: 1611607404086
+url: "{{host}}/api/user-repo"
+name: "[ERROR-no token] User List"
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1611600106262.75
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

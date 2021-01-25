@@ -1,0 +1,30 @@
+_id: req_347c259e2ef1464aba727ee064a6af6c
+type: Request
+parentId: fld_49d1e2490eab44e9b5cfd0ca4f79ba46
+modified: 1611604236074
+created: 1611604152241
+url: "{{host}}/auth/registerUser"
+name: "[ERROR-name empty] Register User"
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"email": "test@gmail.com",
+    	"password": "123456"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_47173ab2dd9543c5be4d1b240f14fa49
+authentication: {}
+metaSortKey: -1611597205270
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,33 @@
+_id: req_6fe3907ff4ea4843930434fa6712b0bd
+type: Request
+parentId: fld_fa659263dae04dcb914af9af39d4b417
+modified: 1611615889770
+created: 1611599254316
+url: "{{host}}/api/user-repo/1"
+name: "[SUCCESS] User Update"
+description: ""
+method: PUT
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"name": "Hiago A.",
+    	"email": "test@gmail.com",
+    	"password": "1234"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_db47ecc2dc924022aed30cd1357009bf
+authentication:
+  type: bearer
+  token: "{{token}}"
+metaSortKey: -1611599254316
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

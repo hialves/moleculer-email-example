@@ -1,0 +1,21 @@
+_id: req_c56cb6aa774e4d6e9d7b81ec99205bb9
+type: Request
+parentId: fld_57c90e21300849e8811e9cead3ce6bd7
+modified: 1611610332126
+created: 1611608119532
+url: "{{host}}/api/user-repo/1"
+name: "[ERROR-no token] User By Id"
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1611598659655.25
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,23 @@
+_id: req_3d493c36d413460999a05cf1d5568584
+type: Request
+parentId: fld_57c90e21300849e8811e9cead3ce6bd7
+modified: 1611610326043
+created: 1611599144417
+url: "{{host}}/api/user-repo/1"
+name: "[SUCCESS] User By Id"
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: bearer
+  token: "{{token}}"
+metaSortKey: -1611599144417
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

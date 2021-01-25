@@ -1,0 +1,14 @@
+_id: ut_c8ffa49f6d534251b171f3b6a0d22db2
+type: UnitTest
+parentId: uts_8d782e53e69843e2b1f8d9e0f67ae05b
+modified: 1611611587301
+created: 1611611412433
+requestId: req_3d493c36d413460999a05cf1d5568584
+name: should found a user
+code: |-
+  const response1 = await insomnia.send();
+  const body = JSON.parse(response1.data)
+
+  expect(response1.status).to.equal(200);
+  expect(body.name).to.equal('Hiago A.')
+  expect(body.email).to.equal('test@gmail.com')

@@ -1,0 +1,23 @@
+_id: req_8117f5a2fb96485b9292ab4e50cf32af
+type: Request
+parentId: fld_22ad759ae7dd4021a346a9a5991776d1
+modified: 1611610410484
+created: 1611600562621
+url: "{{host}}/api/post-repo/1"
+name: "[SUCCESS] Post By Id"
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: bearer
+  token: "{{token}}"
+metaSortKey: -1611599822180.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

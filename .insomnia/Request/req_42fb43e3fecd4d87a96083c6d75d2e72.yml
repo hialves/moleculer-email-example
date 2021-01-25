@@ -1,0 +1,30 @@
+_id: req_42fb43e3fecd4d87a96083c6d75d2e72
+type: Request
+parentId: fld_cd720d973c53429b9d91cb132cba016d
+modified: 1611608299476
+created: 1611580500377
+url: "{{host}}/auth/userLogin"
+name: "[SUCCESS] Login"
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"email": "test@gmail.com",
+    	"password": "12345678"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_86dd666fc58c43959e8e0b827c7e90d8
+authentication: {}
+metaSortKey: -1611597205345
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

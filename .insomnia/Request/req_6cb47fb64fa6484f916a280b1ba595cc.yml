@@ -1,0 +1,23 @@
+_id: req_6cb47fb64fa6484f916a280b1ba595cc
+type: Request
+parentId: fld_57c90e21300849e8811e9cead3ce6bd7
+modified: 1611610341003
+created: 1611607999342
+url: "{{host}}/api/user-repo/999999"
+name: "[ERROR-not found] User By Id"
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: bearer
+  token: "{{token}}"
+metaSortKey: -1611598174893.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

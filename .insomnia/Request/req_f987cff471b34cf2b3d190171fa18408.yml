@@ -1,0 +1,29 @@
+_id: req_f987cff471b34cf2b3d190171fa18408
+type: Request
+parentId: fld_68e50d2d85dc4b1bbb13151b87e906d9
+modified: 1611607359943
+created: 1611607354366
+url: "{{host}}/auth/resolveToken"
+name: "[ERROR-token empty] Resolve Token"
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"token": ""
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_e501ee8c83894544a544a6b314e2b431
+authentication: {}
+metaSortKey: -1611597205313.75
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

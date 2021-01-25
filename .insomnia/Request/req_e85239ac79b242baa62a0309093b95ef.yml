@@ -1,0 +1,30 @@
+_id: req_e85239ac79b242baa62a0309093b95ef
+type: Request
+parentId: fld_49d1e2490eab44e9b5cfd0ca4f79ba46
+modified: 1611604268469
+created: 1611604259608
+url: "{{host}}/auth/registerUser"
+name: "[ERROR-password empty] Register User"
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"name": "Hiago A.",
+    	"email": "test@gmail.com"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_47173ab2dd9543c5be4d1b240f14fa49
+authentication: {}
+metaSortKey: -1611597205357.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,10 @@
+_id: fld_b89b90076b3249c387815de8ef506047
+type: RequestGroup
+parentId: wrk_b3081988ae854f5b84e05f5cf84710e6
+modified: 1611600706418
+created: 1611600706418
+name: Mail Sender
+description: ""
+environment: {}
+environmentPropertyOrder: null
+metaSortKey: -1611600706418

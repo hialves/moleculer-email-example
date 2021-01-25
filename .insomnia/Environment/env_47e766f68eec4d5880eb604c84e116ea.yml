@@ -1,0 +1,18 @@
+_id: env_47e766f68eec4d5880eb604c84e116ea
+type: Environment
+parentId: env_ee79512c9e14f2b1eba2e961fbe1aecfc14e9dae
+modified: 1611615786675
+created: 1611580567434
+name: local
+data:
+  host: http://0.0.0.0:3000
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjExNjE1NzE4LCJleHAiOjE2MTE2MTkzMTh9.tTnoXnkJ15l1vbjgi8WzB81iomsWl5eq_PXwP2muxzY
+  token2: ""
+dataPropertyOrder:
+  "&":
+    - host
+    - token
+    - token2
+color: "#7d69cb"
+isPrivate: false
+metaSortKey: 1611580567434

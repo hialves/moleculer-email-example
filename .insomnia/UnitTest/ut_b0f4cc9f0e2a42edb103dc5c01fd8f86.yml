@@ -1,0 +1,10 @@
+_id: ut_b0f4cc9f0e2a42edb103dc5c01fd8f86
+type: UnitTest
+parentId: uts_bef14a07273f49c4bd67483d5f7a74a2
+modified: 1611616155156
+created: 1611616152113
+requestId: req_ad04e9b3d2974ff7822fcbb7e462d3c0
+name: should send email registration
+code: |-
+  const response1 = await insomnia.send();
+  expect(response1.status).to.equal(200);
